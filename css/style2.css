@@ -52,6 +52,7 @@ header{
 	justify-content:space-between;
 	align-items:center;
 	padding-top: 50px;
+    flex-wrap:wrap;
 }
 .wrap-header nav, .wrap-header div{
 	display: block;
@@ -215,19 +216,23 @@ header{
 @media screen and (max-width: 768px){
 
 	.container{
-		display: block;
 		width: 100%;
 	}
 	.container .laterales{
 		width: 100%;
-		display: block;
-		flex:none;
+		flex:auto;
 	}
 	.container .content-image{
 		width: 100%;
-		display: block;
 		flex:none;
+        order:0;
 	}
+    .laterales-one{
+        order:1;
+    }
+    .laterales-two{
+        order:2;
+    }
 
 }
 
@@ -238,14 +243,14 @@ header{
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 20vh;
+        height: 25vh;
     }
     .secondimage {
         background: url(../img/signboard-center01.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 20vh;        
+        height: 25vh;        
     }
     input{
         width: 75%;
